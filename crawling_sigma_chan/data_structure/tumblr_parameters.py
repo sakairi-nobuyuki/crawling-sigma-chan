@@ -10,6 +10,7 @@ class TumblrParameters:
     _api_key: str = ''
     _tag: str = ''
     _api_url: str = ''
+    _before: str = ''
 
     def __init__(self, tag: str = None) -> None:
         load_dotenv()
@@ -17,6 +18,7 @@ class TumblrParameters:
         self._api_key = os.getenv("TUMBLR_API_KEY")
         self._tag = self._set_initial_tag(tag)
         self._api_url = os.getenv("TUMBLR_API_URL")
+        self._before = ''
         
 
     def _set_initial_tag(self, tag: str) -> str:
@@ -25,6 +27,9 @@ class TumblrParameters:
             return ''
         else:
             return tag
+
+    
+    
                     
     @property
     def parameters_dict(self) -> dict:
