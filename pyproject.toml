@@ -8,6 +8,7 @@ authors = ["sakairi-nobuyuki <SAKAIRI.Nobuyuki@gmail.com>"]
 python = "^3.8"
 python-dotenv = "^0.19.2"
 pytest = "^7.0.1"
+requests = "^2.27.1"
 
 [tool.poetry.dev-dependencies]
 
